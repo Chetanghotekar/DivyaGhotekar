@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crop-container">
+        <h2 id="crop-title"></h2>
+        <p id="crop-info"></p>
+        <a href="crops.html"><button>Back</button></a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const cropName = params.get("crop");
+        
+        const cropData = {
+            wheat: "Wheat requires well-drained loamy soil and moderate rainfall. Common diseases include rust and blight. Common Wheat Diseases Rust (Puccinia spp.)Symptoms: Yellow, orange, or brown pustules on leaves and stems.Prevention: Use resistant wheat varieties, apply fungicides, and practice crop rotation.Blight (Fusarium Head Blight - FHB)Symptoms: Bleached spikelets, shriveled grains, pink fungal growth on wheat heads.Prevention: Avoid excessive nitrogen, ensure proper field drainage, and apply fungicides if neededPowdery Mildew (Blumeria graminis)Symptoms: White powdery fungal growth on leaves, reduced photosynthesis.Prevention: Use resistant varieties, ensure good air circulation, and apply sulfur-based fungicides.Loose Smut (Ustilago tritici)",
+            rice: "Rice grows best in clayey soil with high water retention. Watch out for blast disease.",
+            corn: "Corn needs sandy loam soil and warm temperatures. Common pests include armyworms.",
+            potato: "Potatoes grow in well-drained sandy soil. Late blight is a common issue.",
+            tomato: "Tomatoes thrive in fertile loamy soil. Watch for leaf mold.",
+            carrot: "Carrots need sandy soil with good drainage. Root rot can be a problem.",
+            soybean: "Soybeans grow well in well-aerated soil. Common diseases are rust and mildew.",
+            sugarcane: "Sugarcane needs deep, fertile soil. Mosaic virus is a known disease."
+        };
+
+        document.getElementById("crop-title").innerText = cropName.charAt(0).toUpperCase() + cropName.slice(1);
+        document.getElementById("crop-info").innerText = cropData[cropName];
+    </script>
+</body>
+</html>

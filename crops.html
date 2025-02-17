@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Crop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crop-container">
+        <h2>Select a Crop</h2>
+        <div class="crop-grid">
+            <div class="crop">
+                <img src="images/wheat.jpg" alt="Wheat">
+                <p>Wheat</p>
+                <button onclick="goToInfo('wheat')">View Info</button>
+            </div>
+            <div class="crop">
+                <img src="images/rice.jpg" alt="Rice">
+                <p>Rice</p>
+                <button onclick="goToInfo('rice')">View Info</button>
+            </div>
+            <div class="crop">
+                <img src="images/corn.jpg" alt="Corn">
+                <p>Corn</p>
+                <button onclick="goToInfo('corn')">View Info</button>
+            </div>
+            <div class="crop">
+                <img src="images\potato.png" alt="Potato">
+                <p>Potato</p>
+                <button onclick="goToInfo('potato')">View Info</button>
+            </div>
+            <div class="crop">
+                <img src="images/tomato.png" alt="Tomato">
+                <p>Tomato</p>
+                <button onclick="goToInfo('tomato')">View Info</button>
+            </div>
+            <div class="crop">
+                <img src="images/carrot.jpg" alt="Carrot">
+                <p>Carrot</p>
+                <button onclick="goToInfo('carrot')">View Info</button>
+            </div>
+            <div class="crop">
+                <img src="images/soybean.jpg" alt="Soybean">
+                <p>Soybean</p>
+                <button onclick="goToInfo('soybean')">View Info</button>
+            </div>
+            <div class="crop">
+                <img src="images/sugarcane.jpg" alt="Sugarcane">
+                <p>Sugarcane</p>
+                <button onclick="goToInfo('sugarcane')">View Info</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goToInfo(cropName) {
+            window.location.href = `info.html?crop=${cropName}`;
+        }
+    </script>
+</body>
+</html>
